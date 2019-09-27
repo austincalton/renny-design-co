@@ -89,14 +89,14 @@
         }
 
         .portrait {
-            width: 250px;
-            height: 250px;
+            width: 350px;
+            height: 350px;
             z-index: 5;
-            background: url(../img/Headshot-b&w.jpg);
+            background: url(../img/renny-design-co.png);
             background-position: center;
             background-size: cover;
             border-radius: 50%;
-            border: solid 3px $secondary-color;
+            border: solid 3px set-text-color($primary-color);
         }
     }
 

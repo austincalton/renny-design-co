@@ -1,7 +1,7 @@
-$primary-color: #2B5E8D;
+$primary-color: #668C89;
 $secondary-color: #eece1a;
 $show-home-image: true;
-$home-image: url('../img/coding-setup.jpg');
+$home-image: url('../img/coast-trees.jpg');
 $background-opacity: 0.7;
 
 @mixin easeOut {
@@ -15,16 +15,16 @@ $background-opacity: 0.7;
             background-attachment: fixed;
             background-size: cover;
             
-            &:after {
-                content:'';
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                background: rgba($primary-color, $background-opacity);
-            }
+            // &:after {
+            //     content:'';
+            //     position: absolute;
+            //     top: 0;
+            //     right: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     z-index: -1;
+            //     background: rgba($primary-color, $background-opacity);
+            // }
         }
     }
 }
@@ -32,9 +32,9 @@ $background-opacity: 0.7;
 // Set Text Color
 @function set-text-color($color) {
     @if (lightness($color) > 40) {
-        @return #000;
+        @return #F3FAEF;
     } @else {
-        @return #fff;
+        @return #333;
     }
 }
 
