@@ -104,7 +104,8 @@
   color: #F3FAEF; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 @keyframes pageLoad {
   from {
@@ -114,15 +115,31 @@
 
 @keyframes liftOff {
   from {
+    opacity: 1;
     transform: translateX(0px); }
   to {
-    transform: translateX(500px); } }
+    transform: translateX(500px);
+    opacity: 0; } }
 
-.plane:hover {
-  cursor: pointer;
-  animation-name: liftOff;
+@keyframes clickMe {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: 5; }
+  60% {
+    opacity: 1; }
+  90% {
+    opacity: 5; }
+  100% {
+    opacity: 0; } }
+
+.clickMe {
   animation-duration: 4s;
-  border-bottom: #eece1a solid 2px; }
+  animation-name: clickMe;
+  animation-iteration-count: infinite; }
+
+.clickMe:hover {
+  cursor: pointer; }
 
 body {
   background: #668C89;
@@ -205,6 +222,13 @@ main#about p {
   font-family: 'Antic Slab', serif;
   font-size: 0.9rem; }
 
+main#about li {
+  font-family: 'Antic Slab', serif;
+  font-size: 1rem; }
+
+main#about .steps {
+  color: #eece1a; }
+
 .bio-image {
   width: 300px;
   height: 300px; }
@@ -213,7 +237,7 @@ main#about p {
   display: grid;
   grid-gap: 30px;
   grid-template-areas: 'bioimage bio' 'job1 job2';
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-columns: repeat(2, 50%); }
 
 .bio-image {
   grid-area: bioimage;
@@ -223,7 +247,7 @@ main#about p {
 
 .bio {
   grid-area: bio;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding: 0.5rem;
   background: rgba(102, 140, 137, 0.8);
   border-top: 4px solid #F3FAEF;
@@ -348,9 +372,14 @@ main#contact {
     margin-top: 5vh;
     font-size: 5rem; }
   .boxes div {
-    font-size: 1.6rem; } }
+    font-size: 1.6rem; }
+  main#about ul {
+    text-align: left; } }
 
 @media screen and (max-width: 500px) {
+  #bg-img {
+    background-image: none !important;
+    background-color: #668C89 !important; }
   main#home h1 {
     margin-top: 10vh;
     font-size: 4rem; }
@@ -373,4 +402,24 @@ main#contact {
     font-size: 1.2rem;
     padding: 0.5rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  main#about {
+    padding-left: 1vw;
+    padding-right: 1vw; }
+    main#about .about-info {
+      display: grid;
+      grid-template-areas: 'bioimage' 'bio' 'job1' 'job2';
+      grid-template-columns: repeat(1, 100%);
+      margin-left: 0vw;
+      padding-left: 0vw; }
+    main#about ul {
+      list-style: none;
+      text-align: left;
+      padding-left: 1vw; }
+  main#work {
+    padding-left: 1vw;
+    padding-right: 1vw; }
+  main#contact .lg-heading {
+    padding-left: 0vw; }
+  main#contact .boxes {
+    margin-top: 7vh; } }
