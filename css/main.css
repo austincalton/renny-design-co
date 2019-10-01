@@ -190,7 +190,7 @@ h3 {
   h2.sm-heading,
   h3.sm-heading {
     display: inline-block;
-    background: rgba(243, 250, 239, 0.2);
+    background: rgba(102, 140, 137, 0.5);
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     font-family: 'Julius Sans One', sans-serif;
@@ -311,6 +311,10 @@ main#about .steps {
   border-bottom: 15px solid #F3FAEF;
   border-right: 1px solid #F3FAEF; }
 
+.process {
+  background: rgba(102, 140, 137, 0.8);
+  border: solid 3px #F3FAEF; }
+
 main#work {
   margin-top: 50vh; }
 
@@ -352,6 +356,9 @@ main#contact {
       color: #668C89; }
       .boxes div:hover span {
         color: #668C89; }
+
+footer h3 {
+  text-align: center; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -443,6 +450,8 @@ main#contact {
   main#work h1 {
     margin-top: 10vh;
     font-size: 7rem; }
+  .process ul {
+    text-align: center !important; }
   main#contact h1 {
     margin-top: 10vh;
     font-size: 3rem;
