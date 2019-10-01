@@ -60,7 +60,7 @@
       width: 350px;
       height: 350px;
       z-index: 5;
-      background: url(../img/renny-design-co.png);
+      background: url(../img/renny-design-co-logo-simple.png);
       background-position: center;
       background-size: cover;
       border-radius: 50%;
@@ -93,8 +93,8 @@
   transition-delay: 0.4s; }
 
 .current {
-  font-size: 40px;
-  font-family: 'Monoton', cursive;
+  font-size: 7rem;
+  font-family: 'PalmCanyon';
   color: #eece1a;
   border-bottom: 3px solid #F3FAEF; }
 
@@ -102,6 +102,10 @@
   font-size: 30px;
   font-family: 'Julius Sans One', sans-serif;
   color: #F3FAEF; }
+
+@font-face {
+  font-family: PalmCanyon;
+  src: url(../assets/PalmCanyonDrive.otf); }
 
 * {
   box-sizing: border-box;
@@ -141,6 +145,18 @@
 .clickMe:hover {
   cursor: pointer; }
 
+@keyframes brighten {
+  10% {
+    transform: translateX(50px); }
+  50% {
+    color: #eece1a; } }
+
+.brighten {
+  animation-delay: 5s;
+  animation-name: brighten;
+  animation-duration: 7s;
+  animation-iteration-count: infinite; }
+
 body {
   background: #668C89;
   color: #F3FAEF;
@@ -168,15 +184,34 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem;
-    font-family: 'Monoton', cursive; }
+    font-size: 10rem;
+    font-family: 'PalmCanyon'; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
+    display: inline-block;
+    background: rgba(243, 250, 239, 0.2);
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     font-family: 'Julius Sans One', sans-serif;
     color: #eece1a; }
+
+.needSpace {
+  font-size: 1.3rem !important;
+  margin-top: 5vh; }
+
+.hello {
+  font-family: 'PalmCanyon';
+  font-size: 3rem; }
+
+.we-do {
+  font-size: 1.3rem; }
+
+.quote {
+  padding: 5px 0 5px 0;
+  text-align: center;
+  border-top: solid #eece1a 1px;
+  border-bottom: solid #eece1a 1px; }
 
 h3 {
   font-family: 'Julius Sans One', sans-serif; }
@@ -204,7 +239,7 @@ main {
         color: #eece1a;
         transition: all 0.5s ease-out; }
   main#home {
-    overflow: hidden;
+    overflow: hidden !important;
     animation-name: pageLoad;
     animation-duration: 4s; }
     main#home h1 {
@@ -212,6 +247,8 @@ main {
 
 main#about {
   margin-top: 50vh; }
+  main#about ul {
+    list-style: none; }
 
 .bio-rdc {
   font-family: 'Monoton';
@@ -227,6 +264,7 @@ main#about li {
   font-size: 1rem; }
 
 main#about .steps {
+  font-size: 1.3rem;
   color: #eece1a; }
 
 .bio-image {
@@ -377,23 +415,34 @@ main#contact {
     text-align: left; } }
 
 @media screen and (max-width: 500px) {
+  @keyframes highLight {
+    20% {
+      padding: .5rem; }
+    50% {
+      padding: 1rem; }
+    75% {
+      padding: .5rem; } }
+  .sm-heading {
+    background: none !important; }
   #bg-img {
     background-image: none !important;
     background-color: #668C89 !important; }
   main#home h1 {
     margin-top: 10vh;
-    font-size: 4rem; }
+    font-size: 7rem; }
+  .lg-heading {
+    font-size: 10rem; }
   .sm-heading {
     font-size: 1rem; }
   main#about h1 {
     margin-top: 10vh;
-    font-size: 4rem; }
+    font-size: 7rem; }
   .bio-image {
     width: 150px;
     height: 150px; }
   main#work h1 {
     margin-top: 10vh;
-    font-size: 4rem; }
+    font-size: 7rem; }
   main#contact h1 {
     margin-top: 10vh;
     font-size: 3rem;
@@ -420,6 +469,17 @@ main#contact {
     padding-left: 1vw;
     padding-right: 1vw; }
   main#contact .lg-heading {
+    font-size: 7rem;
     padding-left: 0vw; }
   main#contact .boxes {
-    margin-top: 7vh; } }
+    margin-top: 7vh; }
+    main#contact .boxes .email {
+      animation-delay: 3s;
+      animation-name: highLight;
+      animation-duration: 5s;
+      animation-iteration-count: infinite; }
+    main#contact .boxes .phone {
+      animation-delay: 5s;
+      animation-name: highLight;
+      animation-duration: 5s;
+      animation-iteration-count: infinite; } }
