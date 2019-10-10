@@ -60,7 +60,7 @@
       width: 350px;
       height: 350px;
       z-index: 5;
-      background: url(../img/renny-design-co-logo-simple.png);
+      background: url(../img/logo.png);
       background-position: center;
       background-size: cover;
       border-radius: 50%;
@@ -93,7 +93,8 @@
   transition-delay: 0.4s; }
 
 .current {
-  font-size: 7rem;
+  font-size: 5rem;
+  margin: 0vw 2vw 0vw 2vw;
   font-family: 'PalmCanyon';
   color: #eece1a;
   border-bottom: 3px solid #F3FAEF; }
@@ -423,12 +424,12 @@ footer h3 {
 
 @media screen and (max-width: 500px) {
   @keyframes highLight {
-    20% {
-      padding: .5rem; }
+    0% {
+      opacity: 1; }
     50% {
-      padding: 1rem; }
-    75% {
-      padding: .5rem; } }
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
   .sm-heading {
     background: none !important; }
   #bg-img {
@@ -485,10 +486,10 @@ footer h3 {
     main#contact .boxes .email {
       animation-delay: 3s;
       animation-name: highLight;
-      animation-duration: 5s;
+      animation-duration: 8s;
       animation-iteration-count: infinite; }
     main#contact .boxes .phone {
-      animation-delay: 5s;
+      animation-delay: 8s;
       animation-name: highLight;
-      animation-duration: 5s;
+      animation-duration: 8s;
       animation-iteration-count: infinite; } }
